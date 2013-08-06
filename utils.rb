@@ -87,5 +87,7 @@ end
 
 def self.first_method array
   array.select {|n| n.even?}.max
+def ping
+    puts 'test'
 end
- puts 'test'
+end
