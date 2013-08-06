@@ -1,4 +1,3 @@
-
 module Utils
   def first_method(arr)
     arr.reject! {|el| el % 2 == 1}.max
@@ -60,20 +59,19 @@ module Utils
     min_odd_array_value hsh.keys
   end
 
-# even max or nil
-def first_method_ser_r(array)
-array.reject! {|element| element % 2 == 1}.max
-end
 
-# {max even value or} 
-def second_method_ser_r(hash={})
-  hash.values.reject! {|element| element % 2 == 1}.max
-end
+  def first_method_ser_r(array)
+    array.reject! { |element| element % 2 == 1}.max
+  end
 
-# {max even key or nil} 
-def third_method_ser_r(hash={})
- hash.keys.reject! {|element| element % 2 == 1}.max
-end
+ 
+  def second_method_ser_r(hash={})
+    hash.values.reject! { |element| element % 2 == 1}.max
+  end
 
+
+  def third_method_ser_r(hash={})
+    hash.keys.reject! { |element| element % 2 == 1}.max
+  end
 
 end
