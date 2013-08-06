@@ -21,7 +21,7 @@ module Utils
   end
 
   def fourth_method(arr=[])
-    arr.reject! {|el| el % 3 == 0}.max
+    arr.select {|el| el % 3 == 0}.max
   end
 
   def fifth_method(arr)

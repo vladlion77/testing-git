@@ -5,6 +5,8 @@ puts Utils.min_even_array_value([1, 2, 8, 6, 5])
 puts Utils.max_odd_array_value([1, 2, 8, 6, 5])
 puts Utils.min_odd_array_value([1, 2, 8, 6, 5])
 
+puts Utils.max_odd_array_value([7, 11, 17, 23, 29])
+puts Utils.min_odd_array_value([7, 11, 17, 23, 29])
 
 puts Utils.max_even_hash_value({a: 2, b: 6, 7 => 3, 17 => 5})
 puts Utils.min_even_hash_value({a: 2, b: 6, 7 => 3, 17 => 5})
