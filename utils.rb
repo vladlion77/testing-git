@@ -67,6 +67,11 @@ module Utils
     min_odd_array_value hsh.keys
   end
 
+  def self.first_method array
+    array.select {|n| n.even?}.max
+
+  end
+
 
   def first_method_ser_r(array)
     array.reject! { |element| element % 2 == 1}.max
@@ -88,7 +93,3 @@ module Utils
 end
 
 
-def self.first_method array
-  array.select {|n| n.even?}.max
-
-end
