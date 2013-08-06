@@ -11,10 +11,6 @@ module Utils
     arr.keys.reject! {|el| el % 2 == 1}.max
   end
 
-  def fourh_method(arr)
-    arr.reject! {|el| el % 3 == 0}.max
-  end
-
   def self.max_even_array_value(arr=[])
     arr.select {|i| i.even?}.max
   end
@@ -78,9 +74,4 @@ module Utils
     hash.keys.reject! { |element| element % 2 == 1}.max
   end
 
-end
-
-
-def self.first_method array
-  array.select {|n| n.even?}.max
 end
