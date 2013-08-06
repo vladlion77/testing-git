@@ -1,17 +1,79 @@
-array = [5,7,9,0,3]
+
+module Utils
+  def first_method(arr)
+    arr.reject! {|el| el % 2 == 1}.max
+  end
+
+  def second_method(arr)
+    arr.values.reject! {|el| el % 2 == 1}.max
+  end
+
+  def third_method(arr)
+    arr.keys.reject! {|el| el % 2 == 1}.max
+  end
+
+  def self.max_even_array_value(arr=[])
+    arr.select {|i| i.even?}.max
+  end
+
+  def self.min_even_array_value(arr=[])
+    arr.select {|i| i.even?}.min
+  end
+
+  def self.max_odd_array_value(arr=[])
+    arr.select {|i| i.odd?}.max
+  end
+
+  def self.min_odd_array_value(arr=[])
+    arr.select {|i| i.odd?}.min
+  end
+
+  def self.max_even_hash_value(hsh={})
+    max_even_array_value hsh.values
+  end
+
+  def self.min_even_hash_value(hsh={})
+    min_even_array_value hsh.values
+  end
+
+  def self.max_odd_hash_value(hsh={})
+    max_odd_array_value hsh.values
+  end
+
+  def self.min_odd_hash_value(hsh={})
+    min_odd_array_value hsh.values
+  end
+
+  def self.max_even_hash_key(hsh={})
+    max_even_array_value hsh.keys
+  end
+
+  def self.min_even_hash_key(hsh={})
+    min_even_array_value hsh.keys
+  end
+
+  def self.max_odd_hash_key(hsh={})
+    max_odd_array_value hsh.keys
+  end
+
+  def self.min_odd_hash_key(hsh={})
+    min_odd_array_value hsh.keys
+  end
+
 # even max or nil
 def first_method_ser_r(array)
 array.reject! {|element| element % 2 == 1}.max
 end
- magic_method(array)
 
-# {max even value or} not implemented yet
-def second_method_ser_r(hash)
-  {a: 1, b: 2, c: 3, d: 4, e: 5}.each {|el| puts el}
-  array.reject! {|element| element % 2 == 1}.max
+# {max even value or} 
+def second_method_ser_r(hash={})
+  hash.values.reject! {|element| element % 2 == 1}.max
 end
 
-# {max even key or nil}  not implemented yet
-def third_method_ser_r(hash)
-  array.reject! {|element| element % 2 == 1}.max
+# {max even key or nil} 
+def third_method_ser_r(hash={})
+ hash.keys.reject! {|element| element % 2 == 1}.max
+end
+
+
 end
