@@ -11,8 +11,12 @@ module Utils
     arr.keys.reject! {|el| el % 2 == 1}.max
   end
 
-  def fourh_method(arr)
+  def fourth_method(arr=[])
     arr.reject! {|el| el % 3 == 0}.max
+  end
+
+  def fifth_method(arr)
+    arr.select {|el| el % 5 == 0}.max
   end
 
   def self.max_even_array_value(arr=[])
