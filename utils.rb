@@ -23,8 +23,7 @@ module Utils
     hash.keys.reject! { |element| element % 2 == 1}.max
   end
 
- # self methods below
-  def self.max_even_array_value(arr=[])
+   def self.max_even_array_value(arr=[])
     arr.select {|i| i.even?}.max
   end
 
