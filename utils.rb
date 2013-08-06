@@ -1,13 +1,13 @@
 module Utils
-  def first_method
-    %w{a b c d e f g}.each {|el| puts el}
+  def self.first_method array
+    array.select {|n| n.even?}.max
   end
 
-  def second_method
-    {a: 1, b: 2, c: 3, d: 4, e: 5}.each {|el| puts el}
+  def self.second_method(hash)
+    hash.values.select {|n| n.even?}.max
   end
 
-  def third_method
-    puts 'abcdefg'
+  def self.third_method
+    hash.keys.select {|n| n.even?}.max
   end
 end
