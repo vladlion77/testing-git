@@ -1,46 +1,17 @@
 module Utils
-  
   def first_method(arr)
     arr.reject! {|el| el % 2 == 1}.max
   end
 
   def second_method(arr)
-    arr.values.reject! {|el| el % 2 == 1}.max 
-
-  def self.first_method array
-    array.select {|n| n.even?}.max
+    arr.values.reject! {|el| el % 2 == 1}.max
   end
 
-  def self.second_method(hash)
-    hash.values.select {|n| n.even?}.max
-
+  def third_method(arr)
+    arr.keys.reject! {|el| el % 2 == 1}.max
   end
 
-  def self.third_method(hash)
-    hash.keys.select {|n| n.even?}.max
-  end
-
-  def fourth_method(arr=[])
-    arr.select {|el| el % 3 == 0}.max
-  end
-
-  def fifth_method(arr)
-    arr.select {|el| el % 5 == 0}.max
-  end
-
-  def first_method_ser_r(array)
-    array.reject! { |element| element % 2 == 1}.max
-  end
- 
-  def second_method_ser_r(hash={})
-    hash.values.reject! { |element| element % 2 == 1}.max
-  end
-
-  def third_method_ser_r(hash={})
-    hash.keys.reject! { |element| element % 2 == 1}.max
-  end
-
-   def self.max_even_array_value(arr=[])
+  def self.max_even_array_value(arr=[])
     arr.select {|i| i.even?}.max
   end
 
@@ -88,11 +59,24 @@ module Utils
     min_odd_array_value hsh.keys
   end
 
-  def self.first_method array
-    array.select {|n| n.even?}.max
+
+  def first_method_ser_r(array)
+    array.reject! { |element| element % 2 == 1}.max
+  end
+
+ 
+  def second_method_ser_r(hash={})
+    hash.values.reject! { |element| element % 2 == 1}.max
+  end
+
+
+  def third_method_ser_r(hash={})
+    hash.keys.reject! { |element| element % 2 == 1}.max
   end
 
 end
 
 
-  
+def self.first_method array
+  array.select {|n| n.even?}.max
+end
