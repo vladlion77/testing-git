@@ -88,3 +88,4 @@ end
 def self.first_method array
   array.select {|n| n.even?}.max
 end
+ puts 'test'
