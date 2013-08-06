@@ -1,13 +1,13 @@
 module Utils
-  def first_method(arr=[])
+  def max_even_array_value(arr=[])
     arr.select {|i| i.even?}.max
   end
 
-  def second_method(hsh={})
-    first_method hsh.values
+  def max_even_hash_value(hsh={})
+    max_even_array_value hsh.values
   end
 
-  def third_method(hsh={})
-    first_method hsh.keys
+  def max_even_hash_key(hsh={})
+    max_even_array_value hsh.keys
   end
 end
